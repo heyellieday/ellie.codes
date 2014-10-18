@@ -12,6 +12,8 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <script src="//use.typekit.net/otu2dxq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
     <!-- endbuild -->
   </head>
   <body ng-app="elliecodesApp">
@@ -21,25 +23,24 @@
 
     <!-- Add your site or application content here -->
     <base href="/">
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">elliecodes</h3>
+    <div class="row" id="background">
+      <div class="col-xs-6" id="left">
       </div>
+      <div class="col-xs-6" id="right">
+      </div>
+    </div>
+    
+    <div class="container" ng-controller="ConsoleCtrl">
+      <div class="header">
+        <h3 class="tk-sarina logo">Ellie codes</h3>
+      </div>
+      <div id="console"></div>
 
+    </div>
       <div ui-view></div>
       <a ui-sref="with.ruby">Ruby</a>
        <a ui-sref="with.javascript">js</a>
         <a ui-sref="for">for</a>
-        <div id="console"></div>
-      <div class="footer">
-      </div>
-    </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -82,24 +83,12 @@
     <script src="scripts/jqconsole.min.js" type="text/javascript" charset="utf-8"></script>
 
     <script>
-      $(function () {
-        var jqconsole = $('#console').jqconsole('Hi\n', '>>>');
-        var startPrompt = function () {
-          // Start the prompt with history enabled.
-          jqconsole.Prompt(true, function (input) {
-            // Output input with the class jqconsole-output.
-            jqconsole.Write(input + '\n', 'jqconsole-output');
-            // Restart the prompt.
-            startPrompt();
-          });
-        };
-        startPrompt();
-      });
     </script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/console.js"></script>
         <!-- endbuild -->
 </body>
 </html>

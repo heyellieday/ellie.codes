@@ -38,5 +38,4 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 	      templateUrl: 'views/with.'+languages[i]+'.html'
 	    });
     }
-    $locationProvider.html5Mode(true);
 });

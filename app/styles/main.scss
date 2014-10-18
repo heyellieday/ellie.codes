@@ -11,9 +11,32 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 /* Space out content a bit */
+html{
+  height:100%;
+}
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background:#fbfffe;
+  height:100%;
+}
+#background{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  height:100%;
+  width:100%;
+  @mixin background-side{
+    height:100%;
+  }
+  #left{
+    @include background-side;
+    background:#a1e5d9;
+  }
+  #right{
+    @include background-side;
+    background:#ed9688;
+  }
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -24,16 +47,22 @@ body {
   padding-right: 15px;
 }
 
+.logo{
+  color:white;
+  font-size:3.5em;
+  text-align:center;
+  margin-left: -20px;
+  padding-top:25px;
+}
+
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
-    padding-bottom: 19px;
   }
 }
 
@@ -93,14 +122,26 @@ body {
 
     /* The console container element */
     #console {
-      position: absolute;
-      width: 400px;
+      width: 100%;
       height: 500px;
-      background-color:black;
+      div{
+        position: static !important;
+        div{
+          textarea{
+            width: 0px;
+            top:0px;
+            z-index:-10;
+          }
+        }
+      }
     }
     /* The inner console element. */
     .jqconsole {
-        padding: 10px;
+      padding: 10px;
+      width: 100%;
+      height: 500px;
+      background-color:#202020;
+      color: #a1e5d9;
     }
     /* The cursor. */
     .jqconsole-cursor {
@@ -112,16 +153,16 @@ body {
     }
     /* The current prompt text color */
     .jqconsole-prompt {
-        color: #0d0;
+        color: #ed9688;
     }
     /* The command history */
     .jqconsole-old-prompt {
-        color: #0b0;
+        color: #ed9688;
         font-weight: normal;
     }
     /* The text color when in input mode. */
     .jqconsole-input {
-        color: #dd0;
+        color: #ed9688;
     }
     /* Previously entered input. */
     .jqconsole-old-input {
@@ -130,5 +171,9 @@ body {
     }
     /* The text color of the output. */
     .jqconsole-output {
-        color: white;
+        color: #a1e5d9;
     }
+pre{
+  border-width:0px;
+}
+    
