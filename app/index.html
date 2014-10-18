@@ -12,9 +12,9 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <script src="//use.typekit.net/otu2dxq.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
     <!-- endbuild -->
+        <script src="http://use.typekit.net/otu2dxq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body ng-app="elliecodesApp">
     <!--[if lt IE 7]>
@@ -38,9 +38,9 @@
 
     </div>
       <div ui-view></div>
-      <a ui-sref="with.ruby">Ruby</a>
-       <a ui-sref="with.javascript">js</a>
-        <a ui-sref="for">for</a>
+      <a ui-sref="with.ruby"></a>
+       <a ui-sref="with.javascript"></a>
+        <a ui-sref="for"></a>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -76,19 +76,18 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="scripts/jqconsole.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jqconsole.min.js" type="text/javascript" charset="utf-8"></script>
 
-    <script>
-    </script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/console.js"></script>
+        <script src="scripts/services/console.js"></script>
         <!-- endbuild -->
 </body>
 </html>
